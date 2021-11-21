@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/tvDesvio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Desvio:"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_weight="0.84" />
+
+        <Button
+            android:id="@+id/deleteDesvio"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="0.14"
+            android:drawableStart="@drawable/ic_delete"/>
+
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spinnerDesvioSAIAgregado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:textSize="18sp"/>
+
+    <LinearLayout
+        android:id="@+id/LayoutDesvioSAIAgregado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/chckContratistaDesvioAgregado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contratista"
+            android:textSize="20sp"/>
+
+        <CheckBox
+            android:id="@+id/chckEmpleadoDesvioAgregado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Empleado"
+            android:textSize="20sp"
+            android:layout_marginLeft="@android:dimen/app_icon_size"/>
+
+    </LinearLayout>
+
+</LinearLayout>

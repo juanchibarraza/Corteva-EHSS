@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single" android:id="@+id/formularios">
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_uacnuevo"
+            android:title="@string/UAC" />
+
+        <item
+            android:id="@+id/nav_UACCierre"
+            android:icon="@drawable/ic_uaccierre"
+            android:title="@string/UACCierre" />
+
+        <item
+            android:id="@+id/nav_calidad"
+            android:icon="@drawable/ic_form_select"
+            android:visible="false"
+            android:title="@string/Calidad" />
+
+        <item
+            android:id="@+id/nav_miscargas"
+            android:icon="@drawable/ic_account_search"
+            android:title="Mis Cargas" />
+
+        <item
+            android:id="@+id/nav_tools"
+            android:icon="@drawable/ic_shield_homeseguridad"
+            android:title="@string/Seguridad" />
+
+        <item
+            android:id="@+id/nav_PruebasACampo"
+            android:icon="@drawable/ic_sprout"
+            android:title="JCC - Pruebas A Campo" />
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_alert_octagonreporte"
+            android:title="@string/Reporte" />
+
+        <item
+            android:id="@+id/nav_sai"
+            android:icon="@drawable/highway"
+            android:title="SAI" />
+
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_format_list_checksbbp"
+            android:title="SODA" />
+
+        <item
+            android:id="@+id/nav_Comentarios"
+            android:icon="@drawable/ic_comments"
+            android:title="@string/Sugerencias" />
+
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_iframe_outlinetopten"
+            android:title="@string/Topten" />
+    </group>
+
+    <group android:checkableBehavior="single" android:id="@+id/configuracion">
+
+        <item
+            android:id="@+id/nav_syncro"
+            android:icon="@drawable/ic_syncro"
+            android:title="Sincronizar Datos" />
+
+        <item
+            android:id="@+id/nav_borrar"
+            android:icon="@drawable/ic_delete"
+            android:title="Limpiar Datos" />
+
+        <item
+            android:id="@+id/nav_salir"
+            android:icon="@drawable/ic_account_arrow_left_outlinesalir"
+            android:title="Cerrar Sesión" />
+
+    </group>
+</menu>

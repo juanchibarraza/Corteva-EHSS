@@ -1,0 +1,2131 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.corteva.fragments.PruebasACampoFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/Site"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spinnerSitePruebasACampo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lblFecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/Fecha"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etFechaPruebaACampo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/FechaPruebaACampo"
+                android:layout_marginBottom="10dp"
+                android:textColorHint="#808080"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ObservadorUno"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"/>
+
+            <Spinner
+                android:id="@+id/spinnerObservador1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/ObservadorDos"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etObservador2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/ObservadorDos"
+                android:textColorHint="#808080"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/etNombreProcedimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/NombreProcedimiento"
+                android:layout_marginBottom="10dp"
+                android:textColorHint="#808080"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/etEjecutante"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/Ejecutante"
+                android:layout_marginBottom="10dp"
+                android:textColorHint="#808080"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="@string/Sector"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <Spinner
+                android:id="@+id/spinnerSectorPruebaACampo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/textView_Alcance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Alcance"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"
+                android:background="@color/colorSubtitles"
+                android:paddingLeft="4dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_Alcance"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Cumple"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <RadioGroup
+                    android:id="@+id/Alcance"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@+id/rb1">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Si"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/No"
+                        android:textSize="20sp"
+                        android:id="@+id/rb1"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/etValorReferenciaAlcance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:ems="10"
+                    android:text="1"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <EditText
+                    android:id="@+id/etObservacionesAlcance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Observaciones"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etPropuestaDeMejoraAlcance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Propuesta"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etAccionAlcance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/AccionAlcance"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ResponsableAccion"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <Spinner
+                    android:id="@+id/spinnerResponsableAlcance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_Categoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Categoria"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"
+                android:background="@color/colorSubtitles"
+                android:paddingLeft="4dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_Categoria"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Cumple"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <RadioGroup
+                    android:id="@+id/Categoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@+id/rb2">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Si"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/No"
+                        android:textSize="20sp"
+                        android:id="@+id/rb2"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/etValorReferenciaCategoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    android:text="1"/>
+
+                <EditText
+                    android:id="@+id/etObservacionesCategoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Observaciones"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etPropuestaDeMejoraCategoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Propuesta"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etAccionCategoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/AccionAlcance"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ResponsableAccion"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <Spinner
+                    android:id="@+id/spinnerResponsableCategoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_Atributos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Atributos"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"
+                android:background="@color/colorSubtitles"
+                android:paddingLeft="4dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_Atributos"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Cumple"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <RadioGroup
+                    android:id="@+id/Atributos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@+id/rb3">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Si"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/No"
+                        android:textSize="20sp"
+                        android:id="@+id/rb3"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/etValorReferenciaAtributos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    android:text="1"/>
+
+                <EditText
+                    android:id="@+id/etObservacionesAtributos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Observaciones"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etPropuestaDeMejoraAtributos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Propuesta"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etAccionAtributos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/AccionAlcance"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ResponsableAccion"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <Spinner
+                    android:id="@+id/spinnerResponsableAtributos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_RiesgosYPrecauciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/RiesgosPrecauciones"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"
+                android:background="@color/colorSubtitles"
+                android:paddingLeft="4dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_RiesgosYPrecauciones"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Cumple"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <RadioGroup
+                    android:id="@+id/RiesgosYPrecauciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@+id/rb4">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Si"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/No"
+                        android:textSize="20sp"
+                        android:id="@+id/rb4"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/etValorReferenciaRiesgosYPrecauciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    android:text="10"/>
+
+                <EditText
+                    android:id="@+id/etObservacionesRiesgosYPrecauciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Observaciones"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etPropuestaDeMejoraRiesgosYPrecauciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Propuesta"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etAccionRiesgosYPrecauciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/AccionAlcance"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ResponsableAccion"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <Spinner
+                    android:id="@+id/spinnerResponsableRiesgosYPrecauciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_EPP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorSubtitles"
+                android:paddingLeft="4dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/EPP"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/LinearLayout_EPP"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Cumple"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"/>
+
+            <RadioGroup
+                android:id="@+id/EPP"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal"
+                    android:checkedButton="@+id/rb5">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Si"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/No"
+                    android:textSize="20sp"
+                    android:id="@+id/rb5"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/etValorReferenciaEPP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginBottom="10dp"
+                android:textColorHint="#808080"
+                android:textSize="20sp"
+                android:visibility="gone"
+                android:text="10"/>
+
+            <EditText
+                android:id="@+id/etObservacionesEPP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/Observaciones"
+                android:layout_marginBottom="10dp"
+                android:textColorHint="#808080"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/etPropuestaDeMejoraEPP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/Propuesta"
+                android:layout_marginBottom="10dp"
+                android:textColorHint="#808080"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/etAccionEPP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/AccionAlcance"
+                android:layout_marginBottom="10dp"
+                android:textColorHint="#808080"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ResponsableAccion"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"/>
+
+            <Spinner
+                android:id="@+id/spinnerResponsableEPP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_HerraminetasPruebaACampo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Herramientas"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"
+                android:background="@color/colorSubtitles"
+                android:paddingLeft="4dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_Herramientas"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Cumple"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <RadioGroup
+                    android:id="@+id/Herramientas"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@+id/rb6">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Si"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/No"
+                        android:textSize="20sp"
+                        android:id="@+id/rb6"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/etValorReferenciaHerramientas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    android:text="10"/>
+
+                <EditText
+                    android:id="@+id/etObservacionesHerramientas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Observaciones"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etPropuestaDeMejoraHerramientas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Propuesta"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etAccionHerramientas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/AccionAlcance"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ResponsableAccion"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <Spinner
+                    android:id="@+id/spinnerResponsableHerramientas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_PersonalMinimo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/PersonalMinimo"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"
+                android:background="@color/colorSubtitles"
+                android:paddingLeft="4dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_PersonalMinimo"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Cumple"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <RadioGroup
+                    android:id="@+id/PersonalMinimo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@+id/rb7">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Si"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/No"
+                        android:textSize="20sp"
+                        android:id="@+id/rb7"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/etValorReferenciaPersonalMinimo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    android:text="3"/>
+
+                <EditText
+                    android:id="@+id/etObservacionesPersonalMinimo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Observaciones"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etPropuestaDeMejoraPersonalMinimo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Propuesta"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etAccionPersonalMinimo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/AccionAlcance"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ResponsableAccion"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <Spinner
+                    android:id="@+id/spinnerResponsablePersonalMinimo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_Desviaciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Desviaciones"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"
+                android:background="@color/colorSubtitles"
+                android:paddingLeft="4dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_Desviaciones"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Cumple"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <RadioGroup
+                    android:id="@+id/Desviaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@+id/rb8">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Si"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/No"
+                        android:textSize="20sp"
+                        android:id="@+id/rb8"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/etValorReferenciaDesviaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    android:text="10"/>
+
+                <EditText
+                    android:id="@+id/etObservacionesDesviaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Observaciones"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etPropuestaDeMejoraDesviaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Propuesta"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etAccionDesviaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/AccionAlcance"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ResponsableAccion"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <Spinner
+                    android:id="@+id/spinnerResponsableDesviaciones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_PasoAPaso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/PasoAPaso"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"
+                android:background="@color/colorSubtitles"
+                android:paddingLeft="4dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_PasoAPaso"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Cumple"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <RadioGroup
+                    android:id="@+id/PasoAPaso"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@+id/rb9">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Si"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/No"
+                        android:textSize="20sp"
+                        android:id="@+id/rb9"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/etValorReferenciaPasoAPaso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    android:text="25"/>
+
+                <EditText
+                    android:id="@+id/etObservacionesPasoAPaso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Observaciones"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etPropuestaDeMejoraPasoAPaso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Propuesta"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etAccionPasoAPaso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/AccionAlcance"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ResponsableAccion"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <Spinner
+                    android:id="@+id/spinnerResponsablePasoAPaso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_DocumentosRelacionados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/DocumentosRelacionados"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"
+                android:background="@color/colorSubtitles"
+                android:paddingLeft="4dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_DocumentosRelacionados"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Cumple"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <RadioGroup
+                    android:id="@+id/DocumentosRelacionados"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@+id/rb10">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Si"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/No"
+                        android:textSize="20sp"
+                        android:id="@+id/rb10"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/etValorReferenciaDocumentosRelacionados"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    android:text="1"/>
+
+                <EditText
+                    android:id="@+id/etObservacionesDocumentosRelacionados"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Observaciones"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etPropuestaDeMejoraDocumentosRelacionados"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Propuesta"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etAccionDocumentosRelacionados"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/AccionAlcance"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ResponsableAccion"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <Spinner
+                    android:id="@+id/spinnerResponsableDocumentosRelacionados"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_ControlRegistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ControlRegistro"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"
+                android:background="@color/colorSubtitles"
+                android:paddingLeft="4dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_ControlRegistro"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Cumple"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <RadioGroup
+                    android:id="@+id/ControlRegistro"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@+id/rb11">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Si"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/No"
+                        android:textSize="20sp"
+                        android:id="@+id/rb11"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/etValorReferenciaControlRegistro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    android:text="1"/>
+
+                <EditText
+                    android:id="@+id/etObservacionesControlRegistro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Observaciones"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etPropuestaDeMejoraControlRegistro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Propuesta"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etAccionControlRegistro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/AccionAlcance"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ResponsableAccion"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <Spinner
+                    android:id="@+id/spinnerResponsableControlRegistro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_Validacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Validacion"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"
+                android:background="@color/colorSubtitles"
+                android:paddingLeft="4dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_Validacion"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Cumple"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <RadioGroup
+                    android:id="@+id/Validacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@+id/rb12">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Si"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/No"
+                        android:textSize="20sp"
+                        android:id="@+id/rb12"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/etValorReferenciaValidacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    android:text="5"/>
+
+                <EditText
+                    android:id="@+id/etObservacionesValidacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Observaciones"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etPropuestaDeMejoraValidacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Propuesta"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etAccionValidacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/AccionAlcance"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ResponsableAccion"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <Spinner
+                    android:id="@+id/spinnerResponsableValidacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_Aprobado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Aprobado"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"
+                android:background="@color/colorSubtitles"
+                android:paddingLeft="4dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_Aprobado"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Cumple"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <RadioGroup
+                    android:id="@+id/Aprobado"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@+id/rb13">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Si"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/No"
+                        android:textSize="20sp"
+                        android:id="@+id/rb13"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/etValorReferenciaAprobado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    android:text="5"/>
+
+                <EditText
+                    android:id="@+id/etObservacionesAprobado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Observaciones"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etPropuestaDeMejoraAprobado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Propuesta"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etAccionAprobado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/AccionAlcance"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ResponsableAccion"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <Spinner
+                    android:id="@+id/spinnerResponsableAprobado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_MOC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/MOC"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"
+                android:background="@color/colorSubtitles"
+                android:paddingLeft="4dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_MOC"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Cumple"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <RadioGroup
+                    android:id="@+id/MOC"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@+id/rb14">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Si"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/No"
+                        android:textSize="20sp"
+                        android:id="@+id/rb14"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/etValorReferenciaMOC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    android:text="1"/>
+
+                <EditText
+                    android:id="@+id/etObservacionesMOC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Observaciones"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etPropuestaDeMejoraMOC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Propuesta"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etAccionMOC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/AccionAlcance"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ResponsableAccion"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <Spinner
+                    android:id="@+id/spinnerResponsableMOC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_PruebaMOC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/PruebaMOC"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"
+                android:background="@color/colorSubtitles"
+                android:paddingLeft="4dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_PruebaMOC"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Cumple"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <RadioGroup
+                    android:id="@+id/PruebaMOC"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@+id/rb15">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Si"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/No"
+                        android:textSize="20sp"
+                        android:id="@+id/rb15"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/etValorReferenciaPruebaMOC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    android:text="1"/>
+
+                <EditText
+                    android:id="@+id/etObservacionesPruebaMOC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Observaciones"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etPropuestaDeMejoraPruebaMOC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Propuesta"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etAccionPruebaMOC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/AccionAlcance"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ResponsableAccion"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <Spinner
+                    android:id="@+id/spinnerResponsablePruebaMOC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_UltimaRevision"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/UltimaRevision"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"
+                android:background="@color/colorSubtitles"
+                android:paddingLeft="4dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_UltimaRevision"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Cumple"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <RadioGroup
+                    android:id="@+id/UltimaRevision"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@+id/rb16">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Si"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/No"
+                        android:textSize="20sp"
+                        android:id="@+id/rb16"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/etValorReferenciaUltimaRevision"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    android:text="5"/>
+
+                <EditText
+                    android:id="@+id/etObservacionesUltimaRevision"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Observaciones"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etPropuestaDeMejoraUltimaRevision"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Propuesta"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etAccionUltimaRevision"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/AccionAlcance"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ResponsableAccion"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <Spinner
+                    android:id="@+id/spinnerResponsableUltimaRevision"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_CopiaControlada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/CopiaControlada"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"
+                android:background="@color/colorSubtitles"
+                android:paddingLeft="4dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_CopiaControlada"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Cumple"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <RadioGroup
+                    android:id="@+id/CopiaControlada"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@+id/rb17">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Si"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/No"
+                        android:textSize="20sp"
+                        android:id="@+id/rb17"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/etValorReferenciaCopiaControlada"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    android:text="5"/>
+
+                <EditText
+                    android:id="@+id/etObservacionesCopiaControlada"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Observaciones"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etPropuestaDeMejoraCopiaControlada"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Propuesta"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etAccionCopiaControlada"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/AccionAlcance"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ResponsableAccion"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <Spinner
+                    android:id="@+id/spinnerResponsableCopiaControlada"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_Test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Test"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000000"
+                android:background="@color/colorSubtitles"
+                android:paddingLeft="4dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout_Test"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Cumple"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <RadioGroup
+                    android:id="@+id/Test"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:checkedButton="@+id/rb18">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/Si"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/No"
+                        android:textSize="20sp"
+                        android:id="@+id/rb18"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/etValorReferenciaTest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"
+                    android:visibility="gone"
+                    android:text="5"/>
+
+                <EditText
+                    android:id="@+id/etObservacionesTest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:ems="10"
+                    android:hint="@string/Observaciones"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/etPropuestaDeMejoraTest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/Propuesta"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/etAccionTest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/AccionAlcance"
+                    android:layout_marginBottom="10dp"
+                    android:textColorHint="#808080"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ResponsableAccion"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="#000000"/>
+
+                <Spinner
+                    android:id="@+id/spinnerResponsableTest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewPorcentaje"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Cumpliento de la prueba: 0%"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/colorAccent"
+                android:text="Target: 90%"/>
+
+            <Button
+                android:id="@+id/botonGuardarPruebaACampo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="24dp"
+                android:text="@string/BotonGuardar"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
